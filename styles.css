@@ -1,10 +1,22 @@
 :root {
     --color-green: hsl(75, 94%, 57%);
+    --color-blue: hsl(202, 88%, 51%);
     --color-white: hsl(0, 0%, 100%);
     --color-grey-700: hsl(0, 0%, 20%);
     --color-grey-800: hsl(0, 0%, 12%);
     --color-grey-900: hsl(0, 0%, 8%);
+    --spacing-10 : 10px;
+    --spacing-20 : 20px;
+    --spacing-30 : 30px;
 }
+
+/* Reset Css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 
 body {
     background-color:var(--color-grey-900);
@@ -16,19 +28,64 @@ body {
     width: 500px ;
     border-radius: 15px;
     text-align: center;
+    font-family: "DM Sans", sans-serif;
+    border-radius: 30px;
+    padding: var(--spacing-30);
+    margin: var(--spacing-10) auto;
 }
 
 .container img {
-    border-radius: 50px ;
+    border-radius: 500px ;
     border: 2px solid var(--color-white);
     transition: .5s;
+    width: 300px;
 }
 
 .container:hover img {
-    border-color: var(--color-green);
+    border-color: var(--color-blue);
     scale: 1.1 ;
 }
 
+.container h1 {
+    font-size: 42px;
+    margin-block: var(--spacing-20);
+}
+
 .container h2 {
-    color:var(--color-green);
+    color: var(--color-blue);
+    font-size: 22px;
+    font-weight: 100;
+    margin-bottom: var(--spacing-20);
+}
+
+.container p {
+    font-size: 13px;
+    margin-bottom: var(--spacing-10);
+}
+
+.social {
+    list-style: none;
+}
+
+.social li {
+    background-color: var(--color-grey-700);
+    margin-block: var(--spacing-10);
+    padding-block: var(--spacing-10);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.social li:hover {
+    background-color: var(--color-blue);
+    scale: 1.1;
+}
+
+.social li:hover a {
+    color: var(--color-grey-700);
+}
+
+.social a {
+    color: var(--color-white);
+    text-decoration: none;
+    display: block;
 }
